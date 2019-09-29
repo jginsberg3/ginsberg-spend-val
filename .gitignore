@@ -1,0 +1,4 @@
+testing/
+dev-start.sh
+__pycache__
+app/static/docs/uploads

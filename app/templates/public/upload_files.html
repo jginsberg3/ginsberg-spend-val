@@ -1,0 +1,54 @@
+<head>
+  <link rel="stylesheet" href="/static/css/style.css?v95">
+</head>
+
+<body>
+
+{% block main %}
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Horizon Next</h1>
+      <h2>Partner Spend File Validator</h2>
+      <hr>
+      <form action="/upload-multi-files" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+          <label>Select Files</label>
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" name="uploadfiles" id="uploadfiles" multiple>
+            <!-- <label class="custom-file-label" for="uploadfiles">Select files...</label> -->
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Upload</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% if accepted_list %}
+<div>
+  <hr>
+  Here are the files that were successfully uploaded:
+  <ul>
+  {% for file in accepted_list%}
+  <li>{{file}}</li>
+  {% endfor %}
+  </ul>
+</div>
+{% endif %}
+
+{% if failed_list %}
+<div>
+  Here are the files that did not meet the requirements to upload:
+  <ul>
+  {% for file in failed_list %}
+  <li>{{file[0]}} | {{file[1]}}</li>
+  {% endfor %}
+  </ul>
+</div>
+{% endif %}
+
+{% endblock %}
+
+</body>
