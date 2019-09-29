@@ -1,0 +1,1 @@
+Validate publisher spend files to make sure they can be uploaded to Redshift without issues.
