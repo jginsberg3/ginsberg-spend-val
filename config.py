@@ -7,7 +7,7 @@ class Config(object):
     DB_USERNAME = "admin"
     DB_PASSWORD = "example"
 
-    DOC_UPLOADS = "/Users/jesseginsberg/Documents/Programming/hmi_stuff/spend_upload_app_v3/app/static/docs/uploads"
+    DOC_UPLOADS = "/spend_upload_app_v3/app/static/docs/uploads"
     ALLOWED_DOC_EXTENSIONS = ["XLSX", "XLS", "CSV"]
 
     SESSION_COOKIE_SECURE = True
@@ -21,6 +21,8 @@ class DevelopmentConfig(Config):
     DB_NAME = "development-db"
     DB_USERNAME = "admin"
     DB_PASSWORD = "example"
+
+    DOC_UPLOADS = "/Users/jesseginsberg/Documents/Programming/hmi_stuff/spend_upload_app_v3/app/static/docs/uploads"
 
     SESSION_COOKIE_SECURE = False
 
