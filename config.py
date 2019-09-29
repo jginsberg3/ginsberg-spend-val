@@ -1,3 +1,5 @@
+import os
+
 class Config(object):
     DEBUG = False
     TESTING = False
@@ -7,7 +9,7 @@ class Config(object):
     DB_USERNAME = "admin"
     DB_PASSWORD = "example"
 
-    DOC_UPLOADS = "/spend_upload_app_v3/app/static/docs/uploads"
+    DOC_UPLOADS = os.path.join(os.getcwd(), "ginsberg_app_uploads/uploads")
     ALLOWED_DOC_EXTENSIONS = ["XLSX", "XLS", "CSV"]
 
     SESSION_COOKIE_SECURE = True

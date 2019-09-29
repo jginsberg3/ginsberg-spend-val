@@ -2,3 +2,4 @@ testing/
 dev-start.sh
 __pycache__
 app/static/docs/uploads
+ginsberg_app_uploads/
