@@ -12,6 +12,8 @@ class Config(object):
     DOC_UPLOADS = os.path.join(os.getcwd(), "ginsberg_app_uploads/uploads")
     ALLOWED_DOC_EXTENSIONS = ["XLSX", "XLS", "CSV"]
 
+    SAMPLE_FILES = os.path.join(os.getcwd(), "app/static/samples")
+
     SESSION_COOKIE_SECURE = True
 
 class ProductionConfig(Config):

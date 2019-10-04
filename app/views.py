@@ -1,6 +1,6 @@
 from app import app
 from app.static.scripts.check_file import check_file
-from flask import render_template, request, redirect
+from flask import render_template, request, redirect, send_from_directory
 from werkzeug.utils import secure_filename
 import os 
 import logging
@@ -74,3 +74,9 @@ def allowed_file(filename):
         return False
     else:
         return True
+
+
+@app.route("/download-samples")
+def download_samples():
+    return send_from_directory(directory=app.config["SAMPLE_FILES"],
+        filename='test-files.zip')
